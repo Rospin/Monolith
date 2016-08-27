@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "src\graphics\window\window.h"
+#include "src\math\vec2\vec2.h"
 
 #define DEBUG 1
 
@@ -32,12 +33,14 @@ int main() {
 			LOG("Succesfully initiated GLEW");
 		}
 
+		math::vec2 vector(1.0f, 2.0f);
+		vector = (vector + math::vec2(2.0f, 4.0f) - math::vec2(2.0f, 3.0f)) * math::vec2(5.0f, 7.0f) / math::vec2(2.0f, 2.0f);
+		std::cout << vector << "\n";
+
 	//Program Loop
 		while (!window.closed())
 		{
 			window.clear();
-			if (window.isKeyPressed(GLFW_KEY_A))
-				LOG("pressed A");
 			window.update();
 		}
 	return 0;
