@@ -1,0 +1,20 @@
+﻿Build started 8/25/2016 10:38:46 PM.
+     1>Project "C:\Users\Rospin\documents\visual studio 2015\Projects\Monolith\Monolith-Core\Monolith-Core.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D GLEW_STATIC /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt main.cpp src\graphics\window.cpp
+         window.cpp
+     1>c:\users\rospin\documents\visual studio 2015\projects\monolith\monolith-core\src\graphics\window.cpp(43): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+         main.cpp
+     1>c:\users\rospin\documents\visual studio 2015\projects\monolith\monolith-core\main.cpp(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Rospin\documents\visual studio 2015\Projects\Monolith\Debug\Monolith-Core.exe" /INCREMENTAL /NOLOGO glfw3.lib opengl32.lib glew32s.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Rospin\documents\visual studio 2015\Projects\Monolith\Debug\Monolith-Core.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Rospin\documents\visual studio 2015\Projects\Monolith\Debug\Monolith-Core.lib" /MACHINE:X86 Debug\main.obj
+         Debug\window.obj
+         Monolith-Core.vcxproj -> C:\Users\Rospin\documents\visual studio 2015\Projects\Monolith\Debug\Monolith-Core.exe
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\bscmake.exe /nologo /o"C:\Users\Rospin\documents\visual studio 2015\Projects\Monolith\Debug\Monolith-Core.bsc" /n Debug\main.sbr Debug\window.sbr
+     1>Done Building Project "C:\Users\Rospin\documents\visual studio 2015\Projects\Monolith\Monolith-Core\Monolith-Core.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.82
