@@ -71,8 +71,39 @@ namespace monolith { namespace math {
 		
 		vec2& vec2::operator += (const vec2& other)
 		{
-			return this* + other;
+			*this = *this + other;
+			return *this;
 		}
+
+		vec2& vec2::operator -= (const vec2& other)
+		{
+			*this = *this - other;
+			return *this;
+		}
+
+		vec2& vec2::operator *= (const vec2& other)
+		{
+			*this = *this * other;
+			return *this;
+		}
+
+		vec2& vec2::operator /= (const vec2& other)
+		{
+			*this = *this / other;
+			return *this;
+		}
+
+	//Comparison operators
+		bool vec2::operator == (const vec2& other) 
+		{
+			return x == other.x && y == other.y;
+		}
+
+		bool vec2::operator != (const vec2& other)
+		{
+			return x != other.x || y != other.y;
+		}
+
 	//Output stream operators
 		std::ostream& operator << (std::ostream& stream, const vec2& vector)
 		{

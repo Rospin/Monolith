@@ -1,5 +1,6 @@
 #include <glew.h>
 #include <GLFW\glfw3.h>
+#include <cstdio>
 #include <iostream>
 
 #include "src\graphics\window\window.h"
@@ -8,7 +9,7 @@
 #define DEBUG 1
 
 #if DEBUG
-	#define LOG(x)		std::cout << x << "\n";
+	#define LOG(x)		printf("%s\n", x);
 #else
 	#define LOG(x)
 #endif
@@ -33,9 +34,8 @@ int main() {
 			LOG("Succesfully initiated GLEW");
 		}
 
-		math::vec2 vector(1.0f, 2.0f);
-		vector = (vector + math::vec2(2.0f, 4.0f) - math::vec2(2.0f, 3.0f)) * math::vec2(5.0f, 7.0f) / math::vec2(2.0f, 2.0f);
-		std::cout << vector << "\n";
+		math::vec2 a(1.0f, 2.0f), b(1.0f, 3.0f);
+		std::cout << (a != b) << "\n";
 
 	//Program Loop
 		while (!window.closed())

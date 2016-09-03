@@ -23,7 +23,14 @@ namespace monolith { namespace math {
 			vec2 operator / (const vec2& other);
 
 			vec2& operator += (const vec2& other);
+			vec2& operator -= (const vec2& other);
+			vec2& operator *= (const vec2& other);
+			vec2& operator /= (const vec2& other);
 
+		//Comparison operators
+			bool operator == (const vec2& other);
+			bool operator != (const vec2& other);
+		
 		//Output stream operator
 			friend std::ostream& operator << (std::ostream& stream, const vec2& vector);
 	};
