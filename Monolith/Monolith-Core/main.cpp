@@ -4,7 +4,7 @@
 #include <iostream>
 
 #include "src\graphics\window\window.h"
-#include "src\math\vec2\vec2.h"
+#include "src\math\math.h"
 
 #define DEBUG 1
 
@@ -35,7 +35,7 @@ int main() {
 		}
 
 		math::vec2 a(1.0f, 2.0f), b(1.0f, 3.0f);
-		std::cout << (a != b) << "\n";
+		std::cout << a + b << "\n" << a - b << "\n" << a * b << "\n" << a / b << "\n";
 
 	//Program Loop
 		while (!window.closed())
