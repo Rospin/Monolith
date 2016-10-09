@@ -34,8 +34,7 @@ int main() {
 			LOG("Succesfully initiated GLEW");
 		}
 
-		math::vec2 a(1.0f, 2.0f), b(1.0f, 3.0f);
-		std::cout << a + b << "\n" << a - b << "\n" << a * b << "\n" << a / b << "\n";
+		math::mat4 position = math::mat4::translation(math::vec3(2, 3, 4));
 
 	//Program Loop
 		while (!window.closed())

@@ -1,15 +1,15 @@
-﻿Build started 9/11/2016 8:14:54 PM.
+﻿Build started 10/7/2016 4:59:52 PM.
      1>Project "C:\Users\Rospin\Desktop\Monolith\Monolith\Monolith-Core\Monolith-Core.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D GLEW_STATIC /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\\" /Fd"C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\vc140.pdb" /FR"C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\\" /Gd /TP /analyze- /errorReport:prompt src\math\mat4.cpp
-         mat4.cpp
-       Link:
+     1>Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Monolith-Core.exe" /INCREMENTAL /NOLOGO glfw3.lib opengl32.lib glew32s.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Monolith-Core.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Monolith-Core.lib" /MACHINE:X86 C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\main.obj
          C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\mat4.obj
          C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\window.obj
          C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\vec2.obj
          C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\vec3.obj
          C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\vec4.obj
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\vc120.pdb'; linking object as if no debug info
          Monolith-Core.vcxproj -> C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Monolith-Core.exe
        BscMake:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\bscmake.exe /nologo /o"C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Monolith-Core.bsc" /n C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\main.sbr C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\mat4.sbr C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\window.sbr C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\vec2.sbr C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\vec3.sbr C:\Users\Rospin\Desktop\Monolith\Monolith\bin\Debug\Intermediates\vec4.sbr
@@ -17,4 +17,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.11
+Time Elapsed 00:00:01.88

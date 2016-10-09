@@ -3,6 +3,11 @@
 
 #define _USE_MATH_DEFINES
 
+float toRadians(float degrees)
+{
+	return degrees * M_PI / 180.0f;
+}
+
 namespace monolith { namespace math {
 
 		mat4::mat4()
@@ -10,7 +15,6 @@ namespace monolith { namespace math {
 			for (int i = 0; i < 4 * 4; i++)
 				elements[i] = 0.0f;
 		}
-
 
 		mat4::mat4(float diagonal)
 		{
@@ -101,15 +105,53 @@ namespace monolith { namespace math {
 
 		mat4 mat4::translation(const vec3& translation)
 		{
+			mat4 result(1.0f);
 
+			result.elements[0 + 3 * 4] = translation.x;
+			result.elements[1 + 3 * 4] = translation.y;
+			result.elements[2 + 3 * 4] = translation.z;
+
+			return result;
 		}
+
 		mat4 mat4::rotation(float angle, const vec3& axis)
 		{
+			mat4 result(1.0f);
 
+			float r = toRadians(angle);
+			float c = cos(r);
+			float s = sin(r);
+
+			float omc = 1.0f - c;
+
+			float x = axis.x;
+			float y = axis.y;
+			float z = axis.z;
+
+			result.elements[0 + 0 * 4] = x * omc + c;
+			result.elements[1 + 0 * 4] = y * x * omc + z * s;
+			result.elements[2 + 0 * 4] = x * z * omc - y * s;
+
+			result.elements[0 + 1 * 4] = x * y * omc - z * s;
+			result.elements[1 + 1 * 4] = y * omc + c;
+			result.elements[2 + 1 * 4] = y * z * omc + x * s;
+
+			result.elements[0 + 1 * 4] = x * z * omc + y * s;
+			result.elements[1 + 1 * 4] = y * z * omc - x * s;
+			result.elements[2 + 1 * 4] = z * omc + c;
+
+			return result;
 		}
+
 		mat4 mat4::scale(const vec3& scale)
 		{
+			mat4 result(1.0f);
 
+			result.elements[0 + 0 * 4] = scale.x;
+			result.elements[1 + 1 * 4] = scale.y;
+			result.elements[2 + 2 * 4] = scale.z;
+
+			return result;
 		}
 
 } }
